@@ -8,4 +8,4 @@ I plan on getting back to this project to develop it further. This current versi
 
 Itch page: https://thelastflapjack.itch.io/all-alone
 
-Gameplay video:
+Gameplay video: https://youtu.be/5r3MLjp0e90
