@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/empty_gun_click.ogg-136916706beff905efee02b1113c754b.oggstr"
+
+[deps]
+
+source_file="res://src/weapons/audio/empty_gun_click.ogg"
+dest_files=[ "res://.import/empty_gun_click.ogg-136916706beff905efee02b1113c754b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

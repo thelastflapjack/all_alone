@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/weapons/guns/GunStats.cs" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+ProjectileDamage = 80
+FireRate = 125
+MagazineSize = 6
+Spread = 1.0
+SpreadGainPerShot = 9.0
+Recoil = 0.4
+ShotProjectileCount = 1
+ProjectileSpeed = 180
+MaxRange = 100
+ReloadTime = 2.0
+MaxAmmo = 40
+IsAutomatic = false
+BuyCost = 900

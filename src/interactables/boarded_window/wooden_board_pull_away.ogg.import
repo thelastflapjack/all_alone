@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wooden_board_pull_away.ogg-df4e748bfe8c604bb9c9641489149605.oggstr"
+
+[deps]
+
+source_file="res://src/interactables/boarded_window/wooden_board_pull_away.ogg"
+dest_files=[ "res://.import/wooden_board_pull_away.ogg-df4e748bfe8c604bb9c9641489149605.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

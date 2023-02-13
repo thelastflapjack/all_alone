@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/characters/zombie/states/climb_through_window/ClimbThroughWindow.cs" type="Script" id=1]
+
+[node name="ClimbThroughWindow" type="Node"]
+script = ExtResource( 1 )
+
+[node name="TimerGroanInterval" type="Timer" parent="."]
+wait_time = 6.0
+
+[node name="TimerClimb" type="Timer" parent="."]
+process_mode = 0
+one_shot = true

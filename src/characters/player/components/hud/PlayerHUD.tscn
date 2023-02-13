@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/characters/player/components/hud/HUD.theme" type="Theme" id=1]
+[ext_resource path="res://src/characters/player/components/hud/PlayerHUD.cs" type="Script" id=2]
+[ext_resource path="res://src/characters/player/components/hud/circle_crosshair.shader" type="Shader" id=3]
+[ext_resource path="res://src/characters/player/components/hud/hud_health_effect.png" type="Texture" id=4]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 3 )
+shader_param/edgeLength = 1080
+shader_param/widthPixles = 4
+shader_param/innerDiamiter = 300
+shader_param/color = Color( 0, 0, 0, 0.533333 )
+
+[node name="PlayerHUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="HealthEffect" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 4 )
+
+[node name="Crosshair" type="ColorRect" parent="."]
+material = SubResource( 1 )
+anchor_left = 0.207031
+anchor_right = 0.792969
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="GunAmmo" type="Label" parent="."]
+anchor_left = 0.837891
+anchor_top = 0.886667
+anchor_right = 0.989258
+anchor_bottom = 0.983333
+text = "123 / 456"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Points" type="Label" parent="."]
+anchor_left = 0.837891
+anchor_top = 0.618333
+anchor_right = 0.989258
+anchor_bottom = 0.678333
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ReloadProgress" type="ProgressBar" parent="."]
+anchor_left = 0.463867
+anchor_top = 0.536667
+anchor_right = 0.536133
+anchor_bottom = 0.546667
+rect_clip_content = true
+value = 50.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+visible = false
+anchor_left = 0.0117188
+anchor_top = 0.965
+anchor_right = 0.31543
+anchor_bottom = 0.98
+step = 0.1
+value = 10.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RoundNumber" type="Label" parent="."]
+anchor_left = 0.0126953
+anchor_top = 0.0166667
+anchor_right = 0.0859375
+anchor_bottom = 0.133333
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="InteractiveText" type="Label" parent="."]
+anchor_left = 0.211914
+anchor_top = 0.666667
+anchor_right = 0.788086
+anchor_bottom = 0.71
+theme_type_variation = "LabelSmall"
+text = "Interative text goes here"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HurtHeartBeat" type="AudioStreamPlayer" parent="."]
+bus = "SoundEffects"

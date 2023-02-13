@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/characters/player/components/input/UserInput.cs" type="Script" id=1]
+
+[node name="UserInput" type="Node"]
+script = ExtResource( 1 )

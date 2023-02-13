@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/menu_ui/menu.theme" type="Theme" id=1]
+[ext_resource path="res://src/menu_ui/main_menu/level_select/LevelSelect.cs" type="Script" id=2]
+
+[node name="LevelSelect" type="Control"]
+anchor_right = 0.999999
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TitleLabel" type="Label" parent="."]
+anchor_top = 0.0466667
+anchor_right = 1.0
+anchor_bottom = 0.266667
+margin_bottom = -1.52588e-05
+theme_type_variation = "Header1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LevelButtons" type="VBoxContainer" parent="."]
+anchor_left = 0.0361328
+anchor_top = 0.473333
+anchor_right = 0.229492
+anchor_bottom = 0.965
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 15
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}

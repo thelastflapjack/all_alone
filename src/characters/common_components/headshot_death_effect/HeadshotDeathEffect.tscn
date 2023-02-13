@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/characters/common_components/gib/gib.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://particle_textures/kenney/scorch_02.png" type="Texture" id=2]
+[ext_resource path="res://src/characters/common_components/headshot_death_effect/CompositeEffect.cs" type="Script" id=3]
+
+[sub_resource type="ParticlesMaterial" id=26]
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, -6, 0 )
+initial_velocity = 2.0
+angular_velocity = 20.0
+angular_velocity_random = 0.5
+angle = 360.0
+angle_random = 1.0
+scale = 0.4
+scale_random = 0.8
+
+[sub_resource type="SpatialMaterial" id=27]
+flags_transparent = true
+flags_unshaded = true
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 0.529412, 0.231373, 0.231373, 0.321569 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="QuadMesh" id=28]
+material = SubResource( 27 )
+size = Vector2( 0.4, 0.4 )
+
+[node name="HeadshotDeathEffect" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0, 0 )
+script = ExtResource( 3 )
+
+[node name="Gibs" type="Particles" parent="."]
+emitting = false
+amount = 10
+lifetime = 3.0
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB( -1.0798, -1.45548, -1.21668, 2.15961, 2.91096, 2.43336 )
+local_coords = false
+process_material = SubResource( 26 )
+draw_pass_1 = ExtResource( 1 )
+
+[node name="Blood" type="Particles" parent="."]
+emitting = false
+amount = 10
+lifetime = 3.0
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB( -1.08655, -1.48588, -1.18357, 2.1731, 2.97176, 2.36714 )
+local_coords = false
+process_material = SubResource( 26 )
+draw_pass_1 = SubResource( 28 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+unit_size = 12.0
+bus = "SoundEffects"

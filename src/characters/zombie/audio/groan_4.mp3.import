@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/groan_4.mp3-4b537f0f6c6704012efcaf67778bb920.mp3str"
+
+[deps]
+
+source_file="res://src/characters/zombie/audio/groan_4.mp3"
+dest_files=[ "res://.import/groan_4.mp3-4b537f0f6c6704012efcaf67778bb920.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,32 @@
+res://src/characters/common_components/headshot_death_effect/HeadshotDeathEffect.tscn - headshot sound
+	Can be downloaded from: https://www.zapsplat.com/music/body-fall-and-hit-ground-of-rubble-and-stones-hard-5/
+
+res://src/characters/player/components/states/sprinting/Sprinting.tscn - heavy breathing
+	Edited version of: https://www.zapsplat.com/music/man-breathing-open-mouth-medium-speed-and-heavy/
+
+res://src/characters/player/components/hud/PlayerHUD.tscn - hurt heartbeat
+	Edited version of: https://www.zapsplat.com/music/heartbeat-through-chest-slightly-irregular-getting-faster/
+
+res://src/levels/construction/common_components/Level.tscn - new round alert
+	Two component sounds edited together
+	Component 1: https://www.zapsplat.com/music/horror-swell-shrill-scary-reveal-mysterious/
+	Component 2: https://www.zapsplat.com/music/designed-discordant-horror-bell-chime/
+
+res://src/power_ups/PowerUp.tscn - aura sound
+	Edited version of: https://www.zapsplat.com/music/science-fiction-forcefield-energy-source-droning-and-whining/
+
+res://src/weapons/guns/pistol/Pistol.tscn - gunshot
+	Sample taken from: https://www.zapsplat.com/music/guns-shooting-designed/
+
+res://src/weapons/guns/smg/SMG.tscn - gunshot
+	Sample taken from: https://www.zapsplat.com/music/machine-guns-and-other-guns-shooting-reloading-designed/
+
+res://src/weapons/guns/assault_rifle/AssaultRifle.tscn - gunshot
+res://src/weapons/guns/bolt_action_rifle/BoltActionRifle.tscn - gunshot
+res://src/weapons/guns/revolver/Revolver.tscn - gunshot
+res://src/weapons/guns/semi_auto_rifle/SemiAutoRifle.tscn - gunshot
+	Sample taken from: https://www.zapsplat.com/music/various-guns-shooting-designed/
+
+res://src/weapons/guns/shotgun/Shotgun.tscn - gunshot
+res://src/weapons/guns/shotgun_sawn_off/ShotgunSawnOff.tscn - gunshot
+	Can be downloaded from: https://www.zapsplat.com/music/gun-rifle-single-shot-designed/

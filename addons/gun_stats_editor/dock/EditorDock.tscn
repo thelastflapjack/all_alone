@@ -1,0 +1,168 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/gun_stats_editor/dock/EditorDock.cs" type="Script" id=1]
+
+[node name="EditorDock" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 350 )
+script = ExtResource( 1 )
+
+[node name="Title" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Gun Stats Editor"
+align = 1
+valign = 1
+
+[node name="BtnSave" type="Button" parent="Title"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -41.0
+text = "Save"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+margin_top = 18.0
+margin_right = 1024.0
+margin_bottom = 22.0
+
+[node name="Panel" type="Panel" parent="."]
+margin_top = 26.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+
+[node name="GridContainer" type="GridContainer" parent="Panel/ScrollContainer"]
+margin_right = 1072.0
+margin_bottom = 14.0
+columns = 15
+
+[node name="TitleName1" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_right = 26.0
+margin_bottom = 14.0
+text = "Gun"
+align = 2
+valign = 1
+
+[node name="TitleProjectileDamage" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 30.0
+margin_right = 145.0
+margin_bottom = 14.0
+text = "Projectile damage"
+align = 1
+valign = 1
+
+[node name="TitleFireRate" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 149.0
+margin_right = 202.0
+margin_bottom = 14.0
+text = "Fire rate"
+align = 1
+valign = 1
+
+[node name="TitleMagSize" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 206.0
+margin_right = 262.0
+margin_bottom = 14.0
+text = "Mag size"
+align = 1
+valign = 1
+
+[node name="TitleSpread" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 266.0
+margin_right = 309.0
+margin_bottom = 14.0
+text = "Spread"
+align = 1
+valign = 1
+
+[node name="TitleSpreadGainPerShot" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 313.0
+margin_right = 386.0
+margin_bottom = 14.0
+text = "Spread gain"
+align = 1
+valign = 1
+
+[node name="TitleRecoil" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 390.0
+margin_right = 429.0
+margin_bottom = 14.0
+text = "Recoil"
+align = 1
+valign = 1
+
+[node name="TitleShotProjectileCount" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 433.0
+margin_right = 566.0
+margin_bottom = 14.0
+text = "Shot projectile count"
+align = 1
+valign = 1
+
+[node name="TitleProjectileSpeed" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 570.0
+margin_right = 674.0
+margin_bottom = 14.0
+text = "Projectile speed"
+align = 1
+valign = 1
+
+[node name="TitleMaxRange" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 678.0
+margin_right = 743.0
+margin_bottom = 14.0
+text = "Max range"
+align = 1
+valign = 1
+
+[node name="TitleReloadTime" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 747.0
+margin_right = 824.0
+margin_bottom = 14.0
+text = "Reload time"
+align = 1
+valign = 1
+
+[node name="TitleMaxAmmo" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 828.0
+margin_right = 899.0
+margin_bottom = 14.0
+text = "Max ammo"
+align = 1
+valign = 1
+
+[node name="TitleIsAutomatic" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 903.0
+margin_right = 983.0
+margin_bottom = 14.0
+text = "Is automatic"
+align = 1
+valign = 1
+
+[node name="TitleBuyCost" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 987.0
+margin_right = 1042.0
+margin_bottom = 14.0
+text = "Buy cost"
+align = 1
+valign = 1
+
+[node name="TitleName2" type="Label" parent="Panel/ScrollContainer/GridContainer"]
+margin_left = 1046.0
+margin_right = 1072.0
+margin_bottom = 14.0
+text = "Gun"
+valign = 1
+
+[connection signal="pressed" from="Title/BtnSave" to="." method="SaveChanges"]

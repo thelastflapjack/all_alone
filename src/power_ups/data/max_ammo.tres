@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/power_ups/meshes/max_ammo.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://src/power_ups/PowerUpData.cs" type="Script" id=2]
+[ext_resource path="res://src/power_ups/icons/max_ammo.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 2 )
+Type = 0
+Mesh = ExtResource( 1 )
+Icon = ExtResource( 3 )

@@ -1,0 +1,184 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/menu_ui/menu.theme" type="Theme" id=1]
+[ext_resource path="res://src/menu_ui/controls_page/ControlsPage.cs" type="Script" id=2]
+
+[node name="ControlsPage" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.020202
+anchor_top = 0.037037
+anchor_right = 0.413131
+anchor_bottom = 0.962963
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 754.0
+margin_bottom = 49.0
+size_flags_vertical = 0
+
+[node name="BtnBack" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_right = 115.0
+margin_bottom = 49.0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 119.0
+margin_right = 754.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+theme_type_variation = "Header3"
+text = "Controls"
+align = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+margin_top = 59.0
+margin_right = 754.0
+margin_bottom = 1000.0
+size_flags_vertical = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/PanelContainer"]
+margin_left = 173.0
+margin_top = 312.0
+margin_right = 580.0
+margin_bottom = 628.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/vseparation = 20
+custom_constants/hseparation = 50
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_right = 217.0
+margin_bottom = 28.0
+text = "Move:"
+align = 2
+valign = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_left = 267.0
+margin_right = 407.0
+margin_bottom = 28.0
+text = "W A S D"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_top = 48.0
+margin_right = 217.0
+margin_bottom = 76.0
+text = "Look Around:"
+align = 2
+valign = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_left = 267.0
+margin_top = 48.0
+margin_right = 407.0
+margin_bottom = 76.0
+text = "Mouse"
+align = 1
+valign = 1
+
+[node name="Label13" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_top = 96.0
+margin_right = 217.0
+margin_bottom = 124.0
+text = "Shoot:"
+align = 2
+valign = 1
+
+[node name="Label14" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_left = 267.0
+margin_top = 96.0
+margin_right = 407.0
+margin_bottom = 124.0
+text = "Left CLick"
+align = 1
+valign = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_top = 144.0
+margin_right = 217.0
+margin_bottom = 172.0
+text = "Interact:"
+align = 2
+valign = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_left = 267.0
+margin_top = 144.0
+margin_right = 407.0
+margin_bottom = 172.0
+text = "E"
+align = 1
+valign = 1
+
+[node name="Label7" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_top = 192.0
+margin_right = 217.0
+margin_bottom = 220.0
+text = "Sprint:"
+align = 2
+valign = 1
+
+[node name="Label8" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_left = 267.0
+margin_top = 192.0
+margin_right = 407.0
+margin_bottom = 220.0
+text = "Shift"
+align = 1
+valign = 1
+
+[node name="Label9" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_top = 240.0
+margin_right = 217.0
+margin_bottom = 268.0
+text = "Reload:"
+align = 2
+valign = 1
+
+[node name="Label10" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_left = 267.0
+margin_top = 240.0
+margin_right = 407.0
+margin_bottom = 268.0
+text = "R"
+align = 1
+valign = 1
+
+[node name="Label11" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_top = 288.0
+margin_right = 217.0
+margin_bottom = 316.0
+text = "Switch Weapon:"
+align = 2
+valign = 1
+
+[node name="Label12" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+margin_left = 267.0
+margin_top = 288.0
+margin_right = 407.0
+margin_bottom = 316.0
+text = "F"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/BtnBack" to="." method="OnBackButtonPressed"]

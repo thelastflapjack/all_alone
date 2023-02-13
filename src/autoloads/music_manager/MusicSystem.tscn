@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/autoloads/music_manager/music/Echoes_of_Time_v2.mp3" type="AudioStream" id=1]
+[ext_resource path="res://src/autoloads/music_manager/music/Thunder_Dreams.mp3" type="AudioStream" id=2]
+[ext_resource path="res://src/autoloads/music_manager/music/Penumbra.mp3" type="AudioStream" id=3]
+[ext_resource path="res://src/autoloads/music_manager/music/Ice_Demon.mp3" type="AudioStream" id=4]
+[ext_resource path="res://src/autoloads/music_manager/MusicSystem.cs" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "music_loop"
+length = 1060.0
+loop = true
+step = 1.0
+tracks/0/type = "audio"
+tracks/0/path = NodePath("AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 1 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 3 )
+} ],
+"times": PoolRealArray( 0, 539 )
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 4 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 2 )
+} ],
+"times": PoolRealArray( 276, 833 )
+}
+
+[node name="MusicSystem" type="Node"]
+pause_mode = 2
+script = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -6.0
+bus = "Music"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/music_loop = SubResource( 1 )

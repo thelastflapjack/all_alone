@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/power_ups/spawner/PowerUpSpawner.cs" type="Script" id=1]
+[ext_resource path="res://src/power_ups/data/double_points.tres" type="Resource" id=2]
+[ext_resource path="res://src/power_ups/data/max_ammo.tres" type="Resource" id=3]
+[ext_resource path="res://src/power_ups/data/double_tap.tres" type="Resource" id=4]
+[ext_resource path="res://src/power_ups/icons/double_points.png" type="Texture" id=5]
+[ext_resource path="res://src/power_ups/icons/double_tap.png" type="Texture" id=6]
+[ext_resource path="res://src/power_ups/icons/max_ammo.png" type="Texture" id=7]
+
+[node name="PowerUpSpawner" type="Node"]
+pause_mode = 1
+script = ExtResource( 1 )
+_powerUpsData = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ) ]
+
+[node name="TimerDoubleTap" type="Timer" parent="."]
+process_mode = 0
+wait_time = 10.0
+one_shot = true
+
+[node name="TimerDoublePoints" type="Timer" parent="."]
+process_mode = 0
+wait_time = 10.0
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="PowerupIcons" type="HBoxContainer" parent="CanvasLayer/UI"]
+anchor_top = 0.806667
+anchor_right = 1.0
+anchor_bottom = 0.898333
+mouse_filter = 2
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/PowerupIcons"]
+margin_left = 815.0
+margin_right = 905.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 90, 0 )
+mouse_filter = 2
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/UI/PowerupIcons"]
+margin_left = 915.0
+margin_right = 1005.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 90, 0 )
+mouse_filter = 2
+texture = ExtResource( 6 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/UI/PowerupIcons"]
+margin_left = 1015.0
+margin_right = 1105.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 90, 0 )
+mouse_filter = 2
+texture = ExtResource( 7 )
+expand = true

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/weapons/bullets/spawner/BulletSpawner.cs" type="Script" id=1]
+
+[node name="BulletSpawner" type="Node"]
+pause_mode = 1
+script = ExtResource( 1 )

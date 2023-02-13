@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/buy.ogg-cb17c4110a8d2ae799afbbb67d3cdb6c.oggstr"
+
+[deps]
+
+source_file="res://src/interactables/gun_wall_buy/buy.ogg"
+dest_files=[ "res://.import/buy.ogg-cb17c4110a8d2ae799afbbb67d3cdb6c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

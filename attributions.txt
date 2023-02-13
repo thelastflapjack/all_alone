@@ -1,0 +1,60 @@
+Music from [https://incompetech.com/music/royalty-free/music.html], License [CC BY 4.0]
+	./src/autoloads/music_manager/music/Echoes_of_Time_v2.mp3
+	./src/autoloads/music_manager/music/Ice_Demon.mp3
+	./src/autoloads/music_manager/music/Penumbra.mp3
+	./src/autoloads/music_manager/music/Thunder_Dreams.mp3
+
+Sound Effects from [https://opengameart.org/content/voices-sound-effects-library], License [CC BY 3.0]
+	./src/characters/zombie/audio/attack_1.mp3
+	./src/characters/zombie/audio/attack_2.mp3
+	./src/characters/zombie/audio/attack_3.mp3
+	./src/characters/zombie/audio/attack_4.mp3
+	./src/characters/zombie/audio/attack_5.mp3
+	./src/characters/zombie/audio/attack_6.mp3
+	./src/characters/zombie/audio/attack_7.mp3
+	./src/characters/zombie/audio/groan_1.mp3
+	./src/characters/zombie/audio/groan_2.mp3
+	./src/characters/zombie/audio/groan_3.mp3
+	./src/characters/zombie/audio/groan_4.mp3
+	./src/characters/zombie/audio/groan_5.mp3
+	./src/characters/zombie/audio/groan_6.mp3
+	./src/characters/zombie/audio/groan_7.mp3
+
+Sound effect from [https://opengameart.org/content/100-cc0-sfx-2], License [CC0 1.0]
+	./src/characters/player/audio/footstep.ogg
+	./src/characters/zombie/audio/footstep.ogg
+	./src/interactables/gun_wall_buy/buy.ogg
+
+Sound effect from [https://opengameart.org/content/100-cc0-metal-and-wood-sfx], License [CC0 1.0]
+	./src/interactables/boarded_window/wooden_board_nail_in.ogg  [Edited - Created from multiple sounds]
+	./src/interactables/boarded_window/wooden_board_pull_away.ogg [Edited - Created from multiple sounds]
+
+Sound effect from [https://opengameart.org/content/100-cc0-sfx], License [CC0 1.0]
+	./src/interactables/obstructions/sound_effects/obstruction_clear_1.ogg [Edited - Created from multiple sounds]
+	./src/power_ups/sfx/powerup_pickup_1.ogg
+
+Image textures in material files from [https://polyhaven.com/], License [CC0 1.0]
+	./src/levels/construction/1/models/asphalt.material
+	./src/levels/construction/1/models/brick_wall.material
+	./src/levels/construction/1/models/ceiling.material
+	./src/levels/construction/1/models/concrete_slab.material
+	./src/levels/construction/1/models/courtyard_ground.material
+	./src/levels/construction/1/models/fine_grain_wood.material
+	./src/levels/construction/1/models/floor_wood.material
+	./src/levels/construction/1/models/fountain.material [Edited - Texture painted onto model in Blender. Other colors were then painted on top]
+	./src/levels/construction/1/models/walkway_tiles.material
+	./src/levels/construction/1/models/wood_light.material
+	./src/levels/construction/1/models/yellow_wall.material
+
+Fonts from [https://fonts.google.com/], License [OFL]
+	./fonts/Frijole-Regular.ttf
+	./fonts/OpenSans-Bold.ttf
+
+Paticle textures from [https://kenney.nl/assets/particle-pack], License [CC0 1.0]
+	./particle_textures/kenney/scorch_02.png
+	./particle_textures/kenney/smoke_08.png
+	./particle_textures/kenney/spark_01.png
+
+Gun models from [https://quaternius.com/packs/ultimategun.html], License [CC0 1.0]
+	./src/weapons/raw_models/*
+	

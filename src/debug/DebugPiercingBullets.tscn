@@ -1,0 +1,253 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://src/weapons/guns/smg/SMG.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/weapons/guns/shotgun_sawn_off/ShotgunSawnOff.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/weapons/guns/pistol/Pistol.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/weapons/guns/assault_rifle/AssaultRifle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/debug/materials/proto_grid_orange.material" type="Material" id=5]
+[ext_resource path="res://src/debug/materials/proto_grid_grey.material" type="Material" id=6]
+[ext_resource path="res://src/weapons/guns/pistol/icon.png" type="Texture" id=7]
+[ext_resource path="res://src/weapons/guns/shotgun_sawn_off/icon.png" type="Texture" id=8]
+[ext_resource path="res://src/weapons/guns/smg/icon.png" type="Texture" id=9]
+[ext_resource path="res://src/health_systems/hurtbox/HurtBox.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/hoard_director/HoardDirector.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/interactables/gun_wall_buy/GunWallBuy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/power_ups/spawner/PowerUpSpawner.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/weapons/bullets/spawner/BulletSpawner.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/characters/player/Player.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/weapons/guns/assault_rifle/icon.png" type="Texture" id=16]
+[ext_resource path="res://src/levels/construction/common_components/LevelManager.cs" type="Script" id=17]
+
+[sub_resource type="NavigationMesh" id=2]
+vertices = PoolVector3Array( -20.5, 0.02, 0.25, -12.5, 0.02, 0.25, -12.25, 0.02, -1, -20.5, 0.02, -6.75, -10.25, 0.02, -27.5, -20.5, 0.02, -20.75, -20.5, 0.02, -13.75, -1, 0.02, -6.25, 0.25, 0.02, -6.5, 0.25, 0.02, -27.5, -10.25, 0.02, -27.5, -20.5, 0.02, -27.5, -20.5, 0.02, -20.75, -12.25, 0.02, -1, -1, 0.02, -1, -1, 0.02, -6.25, -20.5, 0.02, -13.75, -20.5, 0.02, -6.75, 5.75, 0.02, -1, 6, 0.02, 0.25, 8, 0.02, 0.25, 8.25, 0.02, -1, 1.25, 0.02, -6.25, 8.25, 0.02, -1, 12.5, 0.02, -1, 20.5, 0.02, -7, 20.5, 0.02, -13.75, 1.25, 0.02, -6.25, 1.25, 0.02, -1, 5.75, 0.02, -1, 12.5, 0.02, -1, 12.75, 0.02, 0, 20.5, 0.02, 0, 20.5, 0.02, -7, 1.25, 0.02, -6.25, 5.75, 0.02, -1, 8.25, 0.02, -1, 20.5, 0.02, -13.75, 20.5, 0.02, -20.75, 10.25, 0.02, -27.5, 0.25, 0.02, -27.5, 0.25, 0.02, -6.5, 1.25, 0.02, -6.25, 20.5, 0.02, -20.75, 20.5, 0.02, -27.5, 10.25, 0.02, -27.5, 8, 0.02, 0.25, 6, 0.02, 0.25, 5.75, 0.02, 1.25, 8.25, 0.02, 1.25, 8, 0.02, 0.25, 5.75, 0.02, 1.25, 1.25, 0.02, 6.5, 5.75, 0.02, 1.25, 1.25, 0.02, 1.25, 1.25, 0.02, 6.5, 20.5, 0.02, 0, 12.75, 0.02, 0, 12.25, 0.02, 1.25, 20.5, 0.02, 7.75, 10.25, 0.02, 31.5, 20.5, 0.02, 31.5, 20.5, 0.02, 23.5, 10.25, 0.02, 31.5, 20.5, 0.02, 23.5, 20.5, 0.02, 15.75, 1.25, 0.02, 6.5, 0.25, 0.02, 6.75, 0.25, 0.02, 31.5, 12.25, 0.02, 1.25, 8.25, 0.02, 1.25, 1.25, 0.02, 6.5, 20.5, 0.02, 15.75, 20.5, 0.02, 7.75, -12.25, 0.02, 1.25, -12.5, 0.02, 0.25, -20.5, 0.02, 0.25, -20.5, 0.02, 8, -20.5, 0.02, 15.75, -20.5, 0.02, 23.5, -10.25, 0.02, 31.5, 0.25, 0.02, 31.5, 0.25, 0.02, 6.75, -1, 0.02, 6.5, -1, 0.02, 6.5, -1, 0.02, 1.25, -12.25, 0.02, 1.25, -20.5, 0.02, 8, -20.5, 0.02, 15.75, -20.5, 0.02, 23.5, -20.5, 0.02, 31.5, -10.25, 0.02, 31.5 )
+polygons = [ PoolIntArray( 1, 0, 2 ), PoolIntArray( 2, 0, 3 ), PoolIntArray( 5, 4, 6 ), PoolIntArray( 6, 4, 9 ), PoolIntArray( 6, 9, 7 ), PoolIntArray( 7, 9, 8 ), PoolIntArray( 12, 11, 10 ), PoolIntArray( 14, 13, 15 ), PoolIntArray( 15, 13, 17 ), PoolIntArray( 15, 17, 16 ), PoolIntArray( 19, 18, 20 ), PoolIntArray( 20, 18, 21 ), PoolIntArray( 23, 22, 24 ), PoolIntArray( 24, 22, 25 ), PoolIntArray( 25, 22, 26 ), PoolIntArray( 29, 28, 27 ), PoolIntArray( 31, 30, 32 ), PoolIntArray( 32, 30, 33 ), PoolIntArray( 36, 35, 34 ), PoolIntArray( 38, 37, 39 ), PoolIntArray( 39, 37, 40 ), PoolIntArray( 40, 37, 42 ), PoolIntArray( 40, 42, 41 ), PoolIntArray( 45, 44, 43 ), PoolIntArray( 48, 47, 46 ), PoolIntArray( 50, 49, 51 ), PoolIntArray( 51, 49, 52 ), PoolIntArray( 55, 54, 53 ), PoolIntArray( 57, 56, 58 ), PoolIntArray( 58, 56, 59 ), PoolIntArray( 62, 61, 60 ), PoolIntArray( 64, 63, 65 ), PoolIntArray( 65, 63, 68 ), PoolIntArray( 65, 68, 66 ), PoolIntArray( 66, 68, 67 ), PoolIntArray( 70, 69, 71 ), PoolIntArray( 71, 69, 73 ), PoolIntArray( 71, 73, 72 ), PoolIntArray( 75, 74, 76 ), PoolIntArray( 76, 74, 77 ), PoolIntArray( 79, 78, 80 ), PoolIntArray( 80, 78, 81 ), PoolIntArray( 81, 78, 83 ), PoolIntArray( 81, 83, 82 ), PoolIntArray( 85, 84, 86 ), PoolIntArray( 86, 84, 87 ), PoolIntArray( 87, 84, 88 ), PoolIntArray( 91, 90, 89 ) ]
+geometry_parsed_geometry_type = 2
+geometry_source_geometry_mode = 2
+cell_height = 0.01
+agent_height = 1.8
+agent_radius = 0.33
+agent_max_climb = 0.2
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 0.1, 2, 3 )
+
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( -0.05, -1, -1.5, 0.05, -1, -1.5, -0.05, -1, 1.5, -0.05, 1, -1.5, 0.05, 1, -1.5, 0.05, -1, 1.5, -0.05, 1, 1.5, 0.05, 1, 1.5 )
+
+[node name="DebugPiercingBullets" type="Spatial"]
+script = ExtResource( 17 )
+_initialZombieCount = 0
+_newZombiesPerRound = 0
+_zombieHealthGainPerRound = 0.01
+
+[node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="."]
+navmesh = SubResource( 2 )
+
+[node name="MainFloor" type="CSGCombiner" parent="." groups=["navmesh"]]
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="MainFloor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 2 )
+width = 42.0
+height = 1.0
+depth = 60.0
+
+[node name="MidStructue1" type="CSGCombiner" parent="." groups=["navmesh"]]
+material_override = ExtResource( 5 )
+use_collision = true
+
+[node name="CSGBox2" type="CSGBox" parent="MidStructue1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+width = 24.0
+height = 4.0
+depth = 1.0
+
+[node name="CSGBox3" type="CSGBox" parent="MidStructue1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18, 2, 14 )
+width = 24.0
+height = 4.0
+depth = 1.0
+
+[node name="CSGBox5" type="CSGBox" parent="MidStructue1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.5, 0 )
+width = 12.0
+height = 1.0
+depth = 1.0
+
+[node name="CSGBox4" type="CSGBox" parent="MidStructue1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.25, 0 )
+operation = 2
+width = 3.4455
+height = 2.5
+depth = 4.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 0, 0, 0 )
+light_energy = 0.8
+
+[node name="Player" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 7 )
+_starterGunPackedScene = ExtResource( 3 )
+
+[node name="BulletSpawner" parent="." instance=ExtResource( 14 )]
+
+[node name="PowerUpSpawner" parent="." instance=ExtResource( 13 )]
+
+[node name="HoardDirector" parent="." instance=ExtResource( 11 )]
+_zombieSpawnTime = 0.5
+
+[node name="ZombieSpawnPoint1" type="Position3D" parent="HoardDirector"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4199, 0, -4.32531 )
+
+[node name="ZombieSpawnPoint2" type="Position3D" parent="HoardDirector"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.43011, 0, 28.2984 )
+
+[node name="ZombieSpawnPoint3" type="Position3D" parent="HoardDirector"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.663, 0, 18.5575 )
+
+[node name="TimerRoundBreak" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="WallBuys" type="Node" parent="."]
+
+[node name="AutomaticRifle" parent="WallBuys" instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5, 1.5, 0.5 )
+_gunPackedScene = ExtResource( 4 )
+_gunIconTexture = ExtResource( 16 )
+_buyCost = 500
+
+[node name="SMG" parent="WallBuys" instance=ExtResource( 12 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -10, 1.5, 0.5 )
+_gunPackedScene = ExtResource( 1 )
+_gunIconTexture = ExtResource( 9 )
+_buyCost = 500
+
+[node name="Pistol" parent="WallBuys" instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 1.5, 0.5 )
+_gunPackedScene = ExtResource( 3 )
+_gunIconTexture = ExtResource( 7 )
+_buyCost = 150
+
+[node name="Shotgun" parent="WallBuys" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, -0.5 )
+_gunPackedScene = ExtResource( 2 )
+_gunIconTexture = ExtResource( 8 )
+_buyCost = 750
+
+[node name="PierceTests" type="Node" parent="."]
+
+[node name="TestHurtBox1" parent="PierceTests" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9 )
+_penetrationResistance = 20
+
+[node name="MeshInstance" type="MeshInstance" parent="PierceTests/TestHurtBox1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PierceTests/TestHurtBox1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="TestHurtBox2" parent="PierceTests" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 9 )
+_penetrationResistance = 20
+
+[node name="MeshInstance" type="MeshInstance" parent="PierceTests/TestHurtBox2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PierceTests/TestHurtBox2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="TestHurtBox3" parent="PierceTests" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 9 )
+_penetrationResistance = 20
+
+[node name="MeshInstance" type="MeshInstance" parent="PierceTests/TestHurtBox3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PierceTests/TestHurtBox3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="TestHurtBox4" parent="PierceTests" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 9 )
+_penetrationResistance = 20
+
+[node name="MeshInstance" type="MeshInstance" parent="PierceTests/TestHurtBox4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PierceTests/TestHurtBox4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="TestHurtBox5" parent="PierceTests" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, 14 )
+
+[node name="MeshInstance" type="MeshInstance" parent="PierceTests/TestHurtBox5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PierceTests/TestHurtBox5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="TestHurtBox6" parent="PierceTests" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14 )
+
+[node name="MeshInstance" type="MeshInstance" parent="PierceTests/TestHurtBox6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PierceTests/TestHurtBox6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="TestHurtBox7" parent="PierceTests" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, 18 )
+
+[node name="MeshInstance" type="MeshInstance" parent="PierceTests/TestHurtBox7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PierceTests/TestHurtBox7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="TestHurtBox8" parent="PierceTests" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18 )
+
+[node name="MeshInstance" type="MeshInstance" parent="PierceTests/TestHurtBox8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PierceTests/TestHurtBox8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="TestHurtBox9" parent="PierceTests" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 22 )
+
+[node name="MeshInstance" type="MeshInstance" parent="PierceTests/TestHurtBox9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PierceTests/TestHurtBox9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="TestHurtBox10" parent="PierceTests" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22 )
+
+[node name="MeshInstance" type="MeshInstance" parent="PierceTests/TestHurtBox10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PierceTests/TestHurtBox10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )

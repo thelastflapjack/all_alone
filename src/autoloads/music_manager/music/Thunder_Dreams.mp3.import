@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Thunder_Dreams.mp3-e4f4fea4e65bb8c777f28e66820c38bc.mp3str"
+
+[deps]
+
+source_file="res://src/autoloads/music_manager/music/Thunder_Dreams.mp3"
+dest_files=[ "res://.import/Thunder_Dreams.mp3-e4f4fea4e65bb8c777f28e66820c38bc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

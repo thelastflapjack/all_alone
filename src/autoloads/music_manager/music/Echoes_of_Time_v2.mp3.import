@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Echoes_of_Time_v2.mp3-96d9673b625a0b5ddc4c4af5c3d31196.mp3str"
+
+[deps]
+
+source_file="res://src/autoloads/music_manager/music/Echoes_of_Time_v2.mp3"
+dest_files=[ "res://.import/Echoes_of_Time_v2.mp3-96d9673b625a0b5ddc4c4af5c3d31196.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

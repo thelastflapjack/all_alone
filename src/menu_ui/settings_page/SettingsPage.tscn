@@ -1,0 +1,369 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/menu_ui/menu.theme" type="Theme" id=1]
+[ext_resource path="res://src/menu_ui/settings_page/SettingsPage.cs" type="Script" id=2]
+
+[node name="SettingsPage" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.020202
+anchor_top = 0.037037
+anchor_right = 0.413131
+anchor_bottom = 0.962963
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 754.0
+margin_bottom = 49.0
+size_flags_vertical = 0
+
+[node name="BtnBack" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_right = 115.0
+margin_bottom = 49.0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 119.0
+margin_right = 754.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+theme_type_variation = "Header3"
+text = "Settings"
+align = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+margin_top = 53.0
+margin_right = 754.0
+margin_bottom = 1000.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
+margin_right = 754.0
+margin_bottom = 947.0
+custom_constants/separation = 30
+alignment = 1
+
+[node name="Audio" type="GridContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+margin_top = 333.0
+margin_right = 754.0
+margin_bottom = 457.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_constants/vseparation = 20
+custom_constants/hseparation = 50
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio"]
+margin_right = 194.0
+margin_bottom = 28.0
+text = "Master"
+align = 2
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio"]
+margin_left = 244.0
+margin_right = 754.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer"]
+margin_right = 15.0
+margin_bottom = 28.0
+text = "0"
+
+[node name="SliderAudioMaster" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer"]
+margin_left = 19.0
+margin_top = 6.0
+margin_right = 465.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+tick_count = 5
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer"]
+margin_left = 469.0
+margin_right = 510.0
+margin_bottom = 28.0
+text = "100"
+
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio"]
+margin_top = 48.0
+margin_right = 194.0
+margin_bottom = 76.0
+text = "Sound Effects"
+align = 2
+valign = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio"]
+margin_left = 244.0
+margin_top = 48.0
+margin_right = 754.0
+margin_bottom = 76.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer2"]
+margin_right = 15.0
+margin_bottom = 28.0
+text = "0"
+
+[node name="SliderAudioSFX" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer2"]
+margin_left = 19.0
+margin_top = 6.0
+margin_right = 465.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+tick_count = 5
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer2"]
+margin_left = 469.0
+margin_right = 510.0
+margin_bottom = 28.0
+text = "100"
+
+[node name="Label3" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio"]
+margin_top = 96.0
+margin_right = 194.0
+margin_bottom = 124.0
+text = "Music"
+align = 2
+valign = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio"]
+margin_left = 244.0
+margin_top = 96.0
+margin_right = 754.0
+margin_bottom = 124.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer3"]
+margin_right = 15.0
+margin_bottom = 28.0
+text = "0"
+
+[node name="SliderAudioMusic" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer3"]
+margin_left = 19.0
+margin_top = 6.0
+margin_right = 465.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+tick_count = 5
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer3"]
+margin_left = 469.0
+margin_right = 510.0
+margin_bottom = 28.0
+text = "100"
+
+[node name="Label4" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio"]
+visible = false
+margin_top = 144.0
+margin_right = 194.0
+margin_bottom = 172.0
+text = "UI"
+align = 2
+valign = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio"]
+visible = false
+margin_left = 244.0
+margin_top = 144.0
+margin_right = 754.0
+margin_bottom = 172.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer4"]
+margin_right = 15.0
+margin_bottom = 28.0
+text = "0"
+
+[node name="SliderAudioUI" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer4"]
+margin_left = 19.0
+margin_top = 6.0
+margin_right = 465.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+tick_count = 5
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer4"]
+margin_left = 469.0
+margin_right = 510.0
+margin_bottom = 28.0
+text = "100"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+margin_top = 487.0
+margin_right = 754.0
+margin_bottom = 491.0
+
+[node name="Gameplay" type="GridContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+margin_top = 521.0
+margin_right = 754.0
+margin_bottom = 580.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_constants/vseparation = 20
+custom_constants/hseparation = 50
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Gameplay"]
+margin_right = 146.0
+margin_bottom = 59.0
+text = "Mouse 
+Sensitivity"
+align = 2
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/Gameplay"]
+margin_left = 196.0
+margin_right = 754.0
+margin_bottom = 59.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Gameplay/HBoxContainer"]
+margin_top = 15.0
+margin_right = 15.0
+margin_bottom = 43.0
+text = "0"
+
+[node name="SliderMouseSense" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/Gameplay/HBoxContainer"]
+margin_left = 19.0
+margin_top = 21.0
+margin_right = 513.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+tick_count = 5
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Gameplay/HBoxContainer"]
+margin_left = 517.0
+margin_top = 15.0
+margin_right = 558.0
+margin_bottom = 43.0
+text = "100"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+margin_top = 610.0
+margin_right = 754.0
+margin_bottom = 614.0
+
+[node name="Video" type="GridContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+visible = false
+margin_left = 266.0
+margin_top = 590.0
+margin_right = 487.0
+margin_bottom = 668.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/vseparation = 20
+custom_constants/hseparation = 50
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LeftColumn" type="VBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/Video"]
+margin_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="BorderlessCheckButton" type="CheckButton" parent="VBoxContainer/PanelContainer/VBoxContainer/Video/LeftColumn"]
+margin_right = 239.0
+margin_bottom = 40.0
+text = "Borderless"
+align = 2
+
+[node name="FullScreenCheckButton" type="CheckButton" parent="VBoxContainer/PanelContainer/VBoxContainer/Video/LeftColumn"]
+margin_top = 44.0
+margin_right = 150.0
+margin_bottom = 84.0
+text = "Full Screen"
+align = 2
+
+[node name="VSyncCheckButton" type="CheckButton" parent="VBoxContainer/PanelContainer/VBoxContainer/Video/LeftColumn"]
+margin_right = 160.0
+margin_bottom = 40.0
+text = "VSync"
+align = 2
+
+[node name="RightColumn" type="VBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/Video"]
+margin_left = 50.0
+margin_right = 221.0
+margin_bottom = 78.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FXAACheckButton" type="CheckButton" parent="VBoxContainer/PanelContainer/VBoxContainer/Video/RightColumn"]
+margin_right = 171.0
+margin_bottom = 40.0
+text = "FXAA"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/Video/RightColumn"]
+margin_top = 44.0
+margin_right = 171.0
+margin_bottom = 78.0
+custom_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/Video/RightColumn/HBoxContainer"]
+margin_top = 3.0
+margin_right = 81.0
+margin_bottom = 31.0
+text = "MSAA"
+
+[node name="MSAAOptionButton" type="OptionButton" parent="VBoxContainer/PanelContainer/VBoxContainer/Video/RightColumn/HBoxContainer"]
+margin_left = 91.0
+margin_right = 171.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+text = "Off"
+items = [ "Off", null, false, 0, null, "x2", null, false, 1, null, "x4", null, false, 2, null, "x8", null, false, 3, null, "x16", null, false, 4, null ]
+selected = 0
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/BtnBack" to="." method="OnBackButtonPressed"]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer/SliderAudioMaster" to="." method="OnAudioSliderValueChanged" binds= [ 0 ]]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer2/SliderAudioSFX" to="." method="OnAudioSliderValueChanged" binds= [ 1 ]]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer3/SliderAudioMusic" to="." method="OnAudioSliderValueChanged" binds= [ 2 ]]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/VBoxContainer/Audio/HBoxContainer4/SliderAudioUI" to="." method="OnAudioSliderValueChanged" binds= [ 3 ]]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/VBoxContainer/Gameplay/HBoxContainer/SliderMouseSense" to="." method="OnSliderMouseSenseValueChanged"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/VBoxContainer/Video/LeftColumn/BorderlessCheckButton" to="." method="OnCheckBtnBorderlessPressed"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/VBoxContainer/Video/LeftColumn/VSyncCheckButton" to="." method="OnCheckBtnVsyncPressed"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/VBoxContainer/Video/RightColumn/FXAACheckButton" to="." method="OnCheckBtnFxaaPressed"]
+[connection signal="item_selected" from="VBoxContainer/PanelContainer/VBoxContainer/Video/RightColumn/HBoxContainer/MSAAOptionButton" to="." method="OnOptionBtnMsaaItemSeleted"]

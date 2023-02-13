@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/attack_6.mp3-06eb62af4592bf73741c73fe7e10765e.mp3str"
+
+[deps]
+
+source_file="res://src/characters/zombie/audio/attack_6.mp3"
+dest_files=[ "res://.import/attack_6.mp3-06eb62af4592bf73741c73fe7e10765e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

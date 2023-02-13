@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/obstruction_clear_1.ogg-930c13c4b943b6a4a6516b46a782d890.oggstr"
+
+[deps]
+
+source_file="res://src/interactables/obstructions/sound_effects/obstruction_clear_1.ogg"
+dest_files=[ "res://.import/obstruction_clear_1.ogg-930c13c4b943b6a4a6516b46a782d890.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

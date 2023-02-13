@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/menu_ui/menu.theme" type="Theme" id=1]
+[ext_resource path="res://src/menu_ui/main_menu/home/Home.cs" type="Script" id=2]
+
+[node name="Home" type="Control"]
+anchor_right = 0.999999
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TitleLabel" type="Label" parent="."]
+anchor_top = 0.0466667
+anchor_right = 1.0
+anchor_bottom = 0.266667
+margin_bottom = -1.52588e-05
+theme_type_variation = "Header1"
+text = "All Alone"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_left = 0.0361328
+anchor_top = 0.473333
+anchor_right = 0.229492
+anchor_bottom = 0.965
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 15
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BtnPlay" type="Button" parent="Buttons"]
+margin_top = 113.0
+margin_right = 371.0
+margin_bottom = 162.0
+text = "Play"
+
+[node name="BtnControls" type="Button" parent="Buttons"]
+margin_top = 177.0
+margin_right = 371.0
+margin_bottom = 226.0
+text = "Controls"
+
+[node name="BtnSettings" type="Button" parent="Buttons"]
+margin_top = 241.0
+margin_right = 371.0
+margin_bottom = 290.0
+text = "Settings"
+
+[node name="BtnCredits" type="Button" parent="Buttons"]
+margin_top = 305.0
+margin_right = 371.0
+margin_bottom = 354.0
+text = "Credits"
+
+[node name="BtnQuit" type="Button" parent="Buttons"]
+margin_top = 369.0
+margin_right = 371.0
+margin_bottom = 418.0
+text = "Quit"
+
+[connection signal="pressed" from="Buttons/BtnPlay" to="." method="OnBtnPlayPressed"]
+[connection signal="pressed" from="Buttons/BtnControls" to="." method="OnBtnControlsPressed"]
+[connection signal="pressed" from="Buttons/BtnSettings" to="." method="OnBtnSettingsPressed"]
+[connection signal="pressed" from="Buttons/BtnCredits" to="." method="OnBtnCreditsPressed"]
+[connection signal="pressed" from="Buttons/BtnQuit" to="." method="OnBtnExitPressed"]

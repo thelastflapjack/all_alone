@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/characters/zombie/states/attack_player/AttackPlayer.cs" type="Script" id=1]
+
+[node name="AttackPlayer" type="Node"]
+script = ExtResource( 1 )
+
+[node name="AttackTimer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 1.2

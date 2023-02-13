@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/debug/materials/tool_highlight.tres" type="Material" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 0.2, 0.2, 0.8 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 0.4, 1.8, 0.4 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 0.9, 0.2, 0.2 )
+
+[node name="SpawnPoint" type="Spatial" groups=["spawn_point"]]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0830963, -0.401831 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.30672, 0 )
+mesh = SubResource( 3 )
+material/0 = ExtResource( 1 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ice_Demon.mp3-e5d2d93e76ce8bbda7cd6efa189f08c1.mp3str"
+
+[deps]
+
+source_file="res://src/autoloads/music_manager/music/Ice_Demon.mp3"
+dest_files=[ "res://.import/Ice_Demon.mp3-e5d2d93e76ce8bbda7cd6efa189f08c1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
